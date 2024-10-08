@@ -17,6 +17,10 @@ const AppIcons = NativeModules.AppIcons
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return AppIcons.multiply(a, b);
+export function setAppIcon(iconName: string): Promise<void> {
+  return AppIcons.setAppIcon(iconName);
+}
+
+export function resetAppIcon(): Promise<void> {
+  return AppIcons.resetAppIcon();
 }
