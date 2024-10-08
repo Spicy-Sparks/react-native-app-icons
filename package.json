@@ -1,5 +1,5 @@
 {
-  "name": "react-native-app-icons",
+  "name": "@spicysparks/react-native-app-icons",
   "version": "0.1.0",
   "description": "React Native app icons",
   "source": "./src/index.tsx",
