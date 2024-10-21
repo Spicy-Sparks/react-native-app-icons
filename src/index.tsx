@@ -17,6 +17,12 @@ const AppIcons = NativeModules.AppIcons
       }
     );
 
+export function configure(iconNames: Array<string>): Promise<void> {
+  if (Platform.OS === 'ios' || Platform.OS === 'macos')
+    return Promise.resolve();
+  return AppIcons.configure(iconNames);
+}
+
 export function setAppIcon(iconName: string): Promise<void> {
   return AppIcons.setAppIcon(iconName);
 }
