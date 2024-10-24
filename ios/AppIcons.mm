@@ -10,6 +10,7 @@ RCT_EXPORT_METHOD(setAppIcon:(NSString *)iconName
     dispatch_async(dispatch_get_main_queue(), ^{
         if(![[UIApplication sharedApplication] supportsAlternateIcons]) {
             reject(@"UNSUPPORTED", nil, nil);
+            return;
         }
         
         NSString* currentIcon = [[UIApplication sharedApplication] alternateIconName];
@@ -36,6 +37,7 @@ RCT_EXPORT_METHOD(resetAppIcon:(RCTPromiseResolveBlock)resolve
     dispatch_async(dispatch_get_main_queue(), ^{
         if(![[UIApplication sharedApplication] supportsAlternateIcons]) {
             reject(@"UNSUPPORTED", nil, nil);
+            return;
         }
         
         [[UIApplication sharedApplication] setAlternateIconName:nil completionHandler:^(NSError * _Nullable error) {
