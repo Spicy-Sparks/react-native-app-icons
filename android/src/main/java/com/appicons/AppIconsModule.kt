@@ -19,10 +19,9 @@ class AppIconsModule(reactContext: ReactApplicationContext) :
 
   @ReactMethod
   fun configure(iconNames: ReadableArray) {
-    this.iconNames = arrayOf()
-    for (i in 0 until iconNames.size()) {
-      this.iconNames += iconNames.getString(i)
-    }
+    this.iconNames += (0 until iconNames.size())
+      .mapNotNull { iconNames.getString(it) }
+      .toTypedArray()
   }
 
   @ReactMethod
