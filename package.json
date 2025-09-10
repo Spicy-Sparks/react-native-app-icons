@@ -1,5 +1,5 @@
 {
-  "name": "@spicysparks/react-native-app-icons",
+  "name": "@javascriptcommon/react-native-app-icons",
   "version": "0.1.5",
   "description": "React Native app icons",
   "source": "./src/index.tsx",
@@ -51,9 +51,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Spicy-Sparks/react-native-app-icons.git"
+    "url": "git+https://github.com/FerhatAdibelli0/react-native-app-icon-changer.git"
   },
-  "author": "Spicy Sparks <hello@spicysparks.com> (https://github.com/Spicy-Sparks)",
+  "author": "Ferhat Adıbelli <ferhatadibelli9@gmail.com> (https://github.com/FerhatAdibelli0)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Spicy-Sparks/react-native-app-icons/issues"
