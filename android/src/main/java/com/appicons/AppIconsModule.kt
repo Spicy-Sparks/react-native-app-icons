@@ -52,22 +52,8 @@ class AppIconsModule(reactContext: ReactApplicationContext) :
 
   @ReactMethod
   fun resetAppIcon(promise: Promise) {
-    try {
-      val packageManager = reactApplicationContext.packageManager
-
-      iconNames.forEach {
-        packageManager.setComponentEnabledSetting(
-          ComponentName(reactApplicationContext, it),
-          PackageManager.COMPONENT_ENABLED_STATE_DISABLED,
-          PackageManager.DONT_KILL_APP
-        )
-      }
-
-      promise.resolve(null)
-    }
-    catch (err: Exception) {
-      promise.reject(err)
-    }
+    val defaultAlias = "${reactApplicationContext.packageName}.MainActivityDefault"
+    setAppIcon(defaultAlias, promise)
   }
 
   companion object {
